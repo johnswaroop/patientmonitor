@@ -22,19 +22,21 @@ $font: "Montserrat", sans-serif;
   border-radius: 25px;
   padding: 1rem;
   box-shadow: 0 0 15px rgba(143, 140, 140, 0.342);
-
+  border: 5px solid black;
   .profile {
     display: flex;
 
     width: auto;
     height: min-content;
-    background-color: rgb(251, 253, 253);
+    background-color: rgb(255, 255, 255);
     border-radius: 15px;
-    border: 5.5px solid #f5fbfa;
+    border: 5.5px solid #ffffff;
     padding: 1rem;
+   
     img {
       width: 64px;
       height: 64px;
+      margin-right: 2rem;
       border-radius: 50%;
     }
     .user_cont {
@@ -42,6 +44,7 @@ $font: "Montserrat", sans-serif;
       flex-direction: column;
       margin-left: 10px;
       color: #2690d6dc;
+      flex-grow: 1;
       h1 {
         margin: 0;
         font-family: $font;
@@ -95,12 +98,12 @@ $font: "Montserrat", sans-serif;
         margin: 0 0 0 5rem;
         font-family: $font;
         font-size: 1.5rem;
-        font-weight: 500;
+        font-weight: 400;
         margin-bottom: 2.5rem;
       }
     }
     .card {
-      padding: 0.8rem;
+      padding: 0.35rem 0;
       position: absolute;
       top: 10%;
       right: 5%;
@@ -115,13 +118,15 @@ $font: "Montserrat", sans-serif;
       align-items: center;
       h2 {
         font-family: $font;
-        font-size: 1rem;
+        font-size: 0.8rem;
         font-weight: 300;
+        margin-top: 0.3rem;
       }
       h1 {
         font-family: $font;
-        font-size: 1.5rem;
-        font-weight: 400;
+        font-size: 1.25rem;
+        font-weight:300;
+        margin: 0.3rem 0;
       }
       span {
         border-bottom: 1px solid #f5fbfa6b;
@@ -139,31 +144,32 @@ $font: "Montserrat", sans-serif;
         margin: 0;
         margin: 2rem 0 0 1rem;
         font-family: $font;
-        font-size: 1.5rem;
+        font-size: 1.2rem;
         font-weight: 400;
       }
       h1 {
         margin: 0;
         margin: 0 0 0 4rem;
         font-family: $font;
-        font-size: 5rem;
-        font-weight: 600;
+        font-size: 4rem;
+        font-weight: 500;
         margin-bottom: 0;
       }
       h3 {
-        margin: 0 0 0 5rem;
+        margin: 0 0 0 4.2rem;
         font-family: $font;
         font-size: 1.5rem;
-        font-weight: 500;
+        font-weight: 400;
         margin-bottom: 2.5rem;
+      
       }
     }
     .cards {
-      padding: 0.8rem;
-      position: absolute;
       top: 60%;
       right: 5%;
       width: 32%;
+      padding: 0.35rem 0;
+      position: absolute;
       height: min-content;
       background: rgba(255, 255, 255, 0.281);
       box-shadow: 0 0 15px rgba(143, 140, 140, 0.342);
@@ -174,13 +180,15 @@ $font: "Montserrat", sans-serif;
       align-items: center;
       h2 {
         font-family: $font;
-        font-size: 1rem;
+        font-size: 0.8rem;
         font-weight: 300;
+        margin-top: 0.3rem;
       }
       h1 {
         font-family: $font;
-        font-size: 1.5rem;
-        font-weight: 400;
+        font-size: 1.25rem;
+        font-weight:300;
+        margin: 0.3rem 0;
       }
       span {
         border-bottom: 1px solid #f5fbfa6b;

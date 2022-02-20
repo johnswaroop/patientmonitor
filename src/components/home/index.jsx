@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import styles from "./home.module.scss";
 import logo from "./logo.png";
 
@@ -23,7 +23,6 @@ ChartJS.register(
 );
 
 function Home() {
-
     const options = {
         responsive: true,
         maintainAspectRatio: false,
@@ -46,21 +45,38 @@ function Home() {
         datasets: [
             {
                 label: 'Heart rate in BPM',
-                data: labels.map((s) => { return Math.random()*100 }),
+                data: labels.map((s) => { return Math.random() * 100 }),
                 backgroundColor: 'rgb(4, 116, 207)',
             },
         ],
     };
+
+    const [patientData, setpatientData] = useState({
+        name: "",
+        email: "",
+        password: "",
+        age: "",
+        weight: "",
+        bloodGroup: ""
+    });
+
+
+    useEffect(() => {
+        let patientLocal = localStorage.getItem('patient-data');
+        if (patientLocal) {
+            setpatientData(JSON.parse(patientLocal));
+        }
+    }, [])
+
     return (
         <>
             <div className={styles.container}>
                 <div className={styles.profile}>
                     <img src={logo} alt="logo" />
                     <div className={styles.user_cont}>
-                        <h1>Sainath Gowlikar</h1>
-
-                        <h3>age:20yrs</h3>
-                        <h3>weight:80kg</h3>
+                        <h1>{patientData.name}</h1>
+                        <h3>age:{patientData.age}yrs</h3>
+                        <h3>weight:{patientData.weight}kg</h3>
                     </div>
                 </div>
 
